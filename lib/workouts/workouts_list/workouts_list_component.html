@@ -1,0 +1,46 @@
+<div class="table-responsive container">
+	<!--<div *ngIf="selectedWorkout">
+        <app-workout-detail [WorkoutDetail]="selectedWorkout"></app-workout-detail>
+    </div>-->
+	<!--<span class=""> Selected: {{WorkoutsListSelected}}/{{WorkoutsList?.length}}</span>
+
+<span class="" *ngIf="selectedWorkout"> Selected workout: {{selectedWorkout.Name}}</span>
+
+<button class=" nav-item  btn btn-danger iconHover" (click)="add()">
+        <i class=" material-icons pull-xs-left ">add</i>Add new workout
+      </button>-->
+	{{test}}
+	<table class="highlight bordered">
+		<thead>
+			<tr>
+				<th class="col-xs ">#</th>
+				<th class="col-xs ">Selected</th>
+				<th class="col-xs ">Name</th>
+				<th class="col-xs ">Localization</th>
+				<th class="col-xs "></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let workout of WorkoutsList" class="ListHover iconHover" (click)="onSelect(workout)">
+				<th>{{workout.Id}}</th>
+				<th> <input [(ngModel)]="workout.IsSelected " type="checkbox"> </th>
+				<th class="row ">
+					<div>{{workout.Name}}</div>
+					<small>
+            {{workout.Description}}
+          </small>
+				</th>
+				<th>{{workout.Localization}} </th>
+				<th class="row">
+					<button class="nav-item btn btn-info iconHover" (click)="Edit()">
+            <i class="material-icons pull-xs-left ">edit</i>
+          </button>
+					<button class=" nav-item btn btn-danger iconHover ">
+            <i class="material-icons pull-xs-left ">delete</i>
+          </button>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<button (click)="add()">add Out</button>

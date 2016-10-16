@@ -1,0 +1,30 @@
+<!--<div>
+  <label>name: </label>
+  <input [(ngModel)]="WorkoutDetail.Name" placeholder="Name" />
+  <span>{{WorkoutDetail.Description}}</span>
+  <span>{{WorkoutDetail.Id}}</span>
+</div>-->
+
+<div class="col-sm-4">
+	<div class="input-field">
+		<input type="text" [(ngModel)]="WorkoutDetail.Name" id="Name" class="validate" />
+		<label for="Name">Name</label>
+	</div>
+</div>
+
+<div class="col-sm-4">
+	<div class="form-group label-floating">
+		<label class="control-label">With Floating Label</label>
+		<input type="text" [(ngModel)]="WorkoutDetail.Description" placeholder="Description" class="form-control" />
+	</div>
+</div>
+
+<div class="col-sm-4">
+	<div class="form-group label-floating has-success">
+		<label class="control-label">Success input</label>
+		<input type="text" [(ngModel)]="WorkoutDetail.Id" placeholder="Id" class="form-control" />
+		<span class="form-control-feedback">
+			<i class="material-icons">done</i>
+		</span>
+	</div>
+</div>
