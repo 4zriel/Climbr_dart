@@ -9,7 +9,6 @@
 <button class=" nav-item  btn btn-danger iconHover" (click)="add()">
         <i class=" material-icons pull-xs-left ">add</i>Add new workout
       </button>-->
-	{{test}}
 	<table class="highlight bordered">
 		<thead>
 			<tr>
@@ -32,7 +31,7 @@
 				</th>
 				<th>{{workout.Localization}} </th>
 				<th class="row">
-					<button class="nav-item btn btn-info iconHover" (click)="Edit()">
+					<button class="nav-item btn btn-info iconHover" (click)="Edit(workout)">
             <i class="material-icons pull-xs-left ">edit</i>
           </button>
 					<button class=" nav-item btn btn-danger iconHover ">

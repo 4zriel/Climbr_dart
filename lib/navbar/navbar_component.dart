@@ -1,5 +1,5 @@
-import 'package:Climbr_dart/classes/tab.dart';
-import 'package:Climbr_dart/services/fire_service.dart';
+import '../classes/tab.dart';
+import '../services/fire_service.dart';
 import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';

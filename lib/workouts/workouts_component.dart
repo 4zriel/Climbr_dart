@@ -1,7 +1,7 @@
-import 'package:Climbr_dart/workouts/workout_detail/workout_detail_compontent.dart';
-import 'package:Climbr_dart/workouts/workouts_list/workouts_list_component.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
+import 'workout_detail/workout_detail_compontent.dart';
+import 'workouts_list/workouts_list_component.dart';
 
 @Component(
   selector: 'workouts',
@@ -15,7 +15,7 @@ import 'package:angular2/router.dart';
       component: WorkoutsListComponent,
       useAsDefault: true),
   const Route(
-      path: '/workout', name: 'Workout', component: WorkoutDetailComponent)
+      path: '/workout/:id', name: 'Workout', component: WorkoutDetailComponent)
 ])
 class WorkoutsComponent {
   WorkoutsComponent();

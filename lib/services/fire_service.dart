@@ -1,6 +1,6 @@
+import '../classes/workout.dart';
 import 'dart:async';
 import 'dart:html';
-import 'package:Climbr_dart/classes/workout.dart';
 import 'package:angular2/core.dart';
 import 'package:firebase3/firebase.dart' as fb;
 

@@ -1,4 +1,4 @@
-name: Climbr_dart
+name: climbr_dart
 description: Climbr - web app for climbers
 version: 0.0.1
 environment:
@@ -8,6 +8,7 @@ dependencies:
   browser: ^0.10.0
   dart_to_js_script_rewriter: ^1.0.1
   firebase3: 0.2.1
+  js: ^0.6.0
 transformers:
 - angular2:
     platform_directives:

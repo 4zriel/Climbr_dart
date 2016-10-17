@@ -1,15 +1,14 @@
-import 'package:Climbr_dart/services/fire_service.dart';
-import 'package:Climbr_dart/workouts/workouts_component.dart';
+import 'footer/footer_component.dart';
+import 'home/home_component.dart';
+import 'navbar/navbar_component.dart';
 import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/platform/common.dart';
 import 'package:angular2/router.dart';
-
-import 'package:Climbr_dart/footer/footer_component.dart';
-import 'package:Climbr_dart/home/home_component.dart';
-import 'package:Climbr_dart/navbar/navbar_component.dart';
-import 'package:Climbr_dart/profile/profile_component.dart';
-import 'package:Climbr_dart/statistics/statistic_component.dart';
+import 'profile/profile_component.dart';
+import 'services/fire_service.dart';
+import 'statistics/statistic_component.dart';
+import 'workouts/workouts_component.dart';
 
 @Component(
     selector: 'app-root',

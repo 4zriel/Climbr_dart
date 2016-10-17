@@ -1,31 +1,40 @@
+import '../../classes/workout.dart';
+import '../../services/fire_service.dart';
+import 'dart:async';
 import 'dart:html';
-import 'package:Climbr_dart/classes/workout.dart';
-import 'package:Climbr_dart/services/fire_service.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/angular2.dart';
+import 'package:angular2/router.dart';
 
 @Component(
-    selector: 'workouts-list', templateUrl: 'workouts_list_component.html')
+    selector: 'workouts-list',
+    templateUrl: 'workouts_list_component.html',
+    styles: const ['workouts_list_component.css'])
 class WorkoutsListComponent {
   final FireService _fireService;
+  final Router _router;
   List<Workout> WorkoutsList = new List<Workout>();
   String test = "JAJCO";
 
-  WorkoutsListComponent(this._fireService) {
+  WorkoutsListComponent(this._fireService, this._router) {
     WorkoutsList = _fireService.GetWorkoutsList();
     // getWorkouts();
   }
 
   void onSelect(Workout w) {
-    window.console.error(w.toString());
+    window.console.info(w.toString());
   }
 
-  void add(){
+  void add() {
     _fireService.sendWorkout();
   }
 
-  // Future getWorkouts() async {
-  //   this.WorkoutList = _fireService.Workouts;
-  //   this.WorkoutList = _fireService.GetWorkoutsList();
-  // }
+  void Edit(Workout w){
+    _router.navigate(['../Workout',{'id': w.Id}]);
+  }
+
+  Future getWorkouts() async {
+    WorkoutsList = _fireService.Workouts;
+    WorkoutsList = _fireService.GetWorkoutsList();
+  }
 }
