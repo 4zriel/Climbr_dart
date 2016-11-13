@@ -4,12 +4,16 @@ version: 0.0.1
 environment:
   sdk: '>=1.19.0 <2.0.0'
 dependencies:
-  angular2: ^2.0.0-beta.21
+  angular2: ^2.0.0
+  angular2_components: ^0.1.0
   browser: ^0.10.0
   dart_to_js_script_rewriter: ^1.0.1
-  firebase3: 0.2.1
-  js: ^0.6.0
+  intl: any
+  firebase3: ^0.2.1
+  ng_bootstrap: any
+  sass_transformer: any
 transformers:
+- sass_transformer
 - angular2:
     platform_directives:
     - 'package:angular2/common.dart#COMMON_DIRECTIVES'

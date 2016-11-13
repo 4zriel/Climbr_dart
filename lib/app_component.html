@@ -1,3 +1,10 @@
-<navbar></navbar>
-<router-outlet></router-outlet>
-<footer></footer>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <navbar-component></navbar-component>
+    <main class="mdl-layout__content">
+        <div class="page-content mdl-grid">
+            <router-outlet class="mdl-cell mdl-cell--stretch"></router-outlet>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+        <footer-component></footer-component>
+    </main>
+</div>

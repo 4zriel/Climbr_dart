@@ -9,12 +9,14 @@ import 'profile/profile_component.dart';
 import 'services/fire_service.dart';
 import 'statistics/statistic_component.dart';
 import 'workouts/workouts_component.dart';
+import 'package:ng_bootstrap/components/accordion/accordion.dart';
+
 
 @Component(
     selector: 'app-root',
     styleUrls: const ['app_component.css'],
     templateUrl: 'app_component.html',
-    directives: const [NavbarComponent, FooterComponent, ROUTER_DIRECTIVES],
+    directives: const [NavbarComponent, FooterComponent, ROUTER_DIRECTIVES, NG_BOOTSTRAP_ACCORDION_DIRECTIVES],
     providers: const [
       const Provider(LocationStrategy, useClass: HashLocationStrategy),
       FireService

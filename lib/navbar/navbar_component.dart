@@ -1,16 +1,21 @@
-import '../classes/tab.dart';
+import '../classes/navtab.dart';
 import '../services/fire_service.dart';
 import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
+import 'package:angular2_components/angular2_components.dart';
 
-@Component(selector: 'navbar', templateUrl: 'navbar_component.html')
+@Component(
+    selector: 'navbar-component',
+    templateUrl: 'navbar_component.html',
+    directives: const [materialDirectives],
+    providers: const [materialProviders])
 class NavbarComponent implements OnInit {
-  final List<Tab> Links = [
-    new Tab('Workouts', 'directions_run', 'Workouts'),
-    new Tab('Statistics', 'equalizer', 'Statistics'),
-    new Tab('Profile', 'account_circle', 'Profile'),
-    new Tab('Home', 'home', 'Home'),
+  final List<NavTab> Links = [
+    new NavTab('Home', 'home', 'Home'),
+    new NavTab('Workouts', 'directions_run', 'Workouts'),
+    new NavTab('Statistics', 'equalizer', 'Statistics'),
+    new NavTab('Profile', 'account_circle', 'Profile')
   ];
 
   final Router _router;
@@ -20,7 +25,7 @@ class NavbarComponent implements OnInit {
 
   void ngOnInit() {}
 
-  void goToLink(Tab link) {
+  void goToLink(NavTab link) {
     _router.navigate([link.Link, {}]);
   }
 }

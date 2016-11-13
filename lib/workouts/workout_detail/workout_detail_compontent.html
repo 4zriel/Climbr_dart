@@ -1,30 +1,9 @@
-<!--<div>
-  <label>name: </label>
-  <input [(ngModel)]="workoutDetail.Name" placeholder="Name" />
-  <span>{{workoutDetail.Description}}</span>
-  <span>{{workoutDetail.Id}}</span>
-</div>-->
-
-<div class="col-sm-4">
-	<div class="input-field">
-		<input type="text" [(ngModel)]="workoutDetail.Name" id="Name" class="validate" />
-		<label for="Name">Name</label>
-	</div>
+<div>
+	<material-input floatingLabel label="Id" type="number" [(numericValue)]="workoutDetail.Id" [checkInteger]="true" [checkPositive]="true"
+					[lowerBound]="0" [upperBound]="99999">
+	</material-input>
+	<material-input floatingLabel label="Name" [(inputText)]="workoutDetail.Name"></material-input>
+	<material-input floatingLabel label="Description" [(inputText)]="workoutDetail.Description"></material-input>
 </div>
-
-<div class="col-sm-4">
-	<div class="form-group label-floating">
-		<label class="control-label">With Floating Label</label>
-		<input type="text" [(ngModel)]="workoutDetail.Description" placeholder="Description" class="form-control" />
-	</div>
-</div>
-
-<div class="col-sm-4">
-	<div class="form-group label-floating has-success">
-		<label class="control-label">Success input</label>
-		<input type="text" [(ngModel)]="workoutDetail.Id" placeholder="Id" class="form-control" />
-		<span class="form-control-feedback">
-			<i class="material-icons">done</i>
-		</span>
-	</div>
-</div>
+<material-button raised (trigger)="saveWorkout()">Save</material-button>
+<material-button raised (trigger)="cancel()">Cancel</material-button>

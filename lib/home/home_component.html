@@ -1,13 +1,40 @@
-<div class="container green darken-3">
-	<div class="card Large">
-		<div class="card-content">
-			<h1 class="display-3  m-x-auto">Welcome to ClimbR!</h1>
+<div class=" mdl-grid ">
+	<div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--stretch">
+		<div class="mdl-card__titlet">
+			<h1 class="mdl-card__title-text">Welcome to ClimbR!</h1>
+		</div>
+		<div class="mdl-card__supporting-text">
 			<p class="lead">First sport tracker dedicated only for climbers*</p>
-			<hr class="m-y-2">
-			<p>*Or at least first created for climbers by climber :)</p>
-			<p class="card-action">
-				<a class="btn btn-primary btn-lg" href="#" role="button">Let's start</a>
-			</p>
+			<small>*Or at least first created for climbers by climber :)</small>
+		</div>
+		<div class="mdl-card__actions mdl-card--border">
+			Let's start by signing in
 		</div>
 	</div>
 </div>
+<div class=" mdl-grid ">
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--stretch">
+		<div class="mdl-card__titlet">
+			<h1 class="mdl-card__title-text">Sign in</h1>
+		</div>
+		<div class="mdl-card__supporting-text">
+			Create new account or sign in using buttons below
+		</div>
+	</div>
+</div>
+<material-expansionpanel-set>
+	<material-expansionpanel name="Sign in" saveText="Sign in" (save)="SignIn()">
+		<div>
+			<material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email "></material-input>
+			<material-input floatingLabel required label="Password " type="password" [(inputText)]="user.Password "></material-input>
+		</div>
+	</material-expansionpanel>
+	<material-expansionpanel name="Create new account " saveText="Create new account " (save)="CreateUser()">
+		<div>
+			<material-input floatingLabel required label="Name" [(inputText)]="user.Name"></material-input>
+			<material-input floatingLabel required label="Password" type="password" [(inputText)]="user.Password"></material-input>
+			<material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email"></material-input>
+		</div>
+	</material-expansionpanel>
+</material-expansionpanel-set>
+<bs-alert *ngIf="hasError" [dismissible]="true">{{error}}</bs-alert>

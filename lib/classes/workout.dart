@@ -11,6 +11,7 @@ class Workout {
   bool isDirty = false;
   String Name = "";
   int Rating = 0;
+  String Key = "";
 
   static Workout deserialize(input) {
     var result = new Workout("NewName");
@@ -78,9 +79,10 @@ class Workout {
       this.Style,
       this.Rate,
       this.Date,
-      this.Rating]);
+      this.Rating,
+      this.Key]);
 
-  Workout.fromMap(Map map)
+  Workout.fromMap(Map map, var key)
       : this(
             map['Name'],
             map['Id'],
@@ -91,7 +93,8 @@ class Workout {
             map['Style'],
             map['Rate'],
             map['Date'],
-            map['Rating']);
+            map['Rating'],
+            key);
 
   Map toMap() => {
         "Name": Name,
