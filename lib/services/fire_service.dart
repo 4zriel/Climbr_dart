@@ -1,16 +1,18 @@
-import '../classes/workout.dart';
-import '../classes/user.dart';
 import 'dart:async';
 import 'dart:html';
+
 import 'package:angular2/core.dart';
 import 'package:firebase3/firebase.dart' as fb;
+
+import '../classes/user.dart';
+import '../classes/workout.dart';
 
 @Injectable()
 class FireService {
   fb.Auth _fbAuth;
   fb.GoogleAuthProvider _fbGoogleAuthProvider;
   fb.Database _fbDatabase;
-  fb.Storage _fbStorage;
+  //fb.Storage _fbStorage;
   fb.DatabaseReference _fbRefWorkouts;
   fb.DatabaseReference _fbRefUsers;
   fb.User user;

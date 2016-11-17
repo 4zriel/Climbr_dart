@@ -1,11 +1,13 @@
-import '../../classes/workout.dart';
-import '../../services/fire_service.dart';
 import 'dart:async';
 import 'dart:html';
-import 'package:angular2/core.dart';
+
 import 'package:angular2/angular2.dart';
+import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 import 'package:angular2_components/angular2_components.dart';
+
+import '../../classes/workout.dart';
+import '../../services/fire_service.dart';
 
 @Component(
     selector: 'workouts-list',
@@ -21,7 +23,7 @@ class WorkoutsListComponent {
   bool inProgress = true;
 
   WorkoutsListComponent(this._fireService, this._router) {
-     getWorkouts();
+    getWorkouts();
   }
 
   void onSelect(Workout w) {

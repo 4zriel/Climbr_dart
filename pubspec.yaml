@@ -10,11 +10,8 @@ dependencies:
   dart_to_js_script_rewriter: ^1.0.1
   intl: any
   firebase3: ^0.2.1
-  ng_bootstrap: any
-  sass_transformer: any
 transformers:
-- sass_transformer
-- angular2:
+- angular2: 
     platform_directives:
     - 'package:angular2/common.dart#COMMON_DIRECTIVES'
     platform_pipes:

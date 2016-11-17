@@ -7,17 +7,16 @@ import '../classes/user.dart';
 import '../services/fire_service.dart';
 
 @Component(
-    selector: 'home',
-    templateUrl: 'home_component.html',
-    styleUrls: const ['home_component.css'],
+    selector: 'login',
+    templateUrl: 'login_component.html',
     directives: const [materialDirectives],
     providers: const [materialProviders])
-class HomeComponent {
+class LoginComponent {
   final FireService _fireService;
   User user = new User();
   String error = "";
   bool hasError = false;
-  HomeComponent(this._fireService);
+  LoginComponent(this._fireService);
 
   Future CreateUser() async {
     try {

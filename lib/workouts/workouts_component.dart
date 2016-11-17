@@ -1,5 +1,6 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
+
 import 'workout_detail/workout_detail_compontent.dart';
 import 'workouts_list/workouts_list_component.dart';
 

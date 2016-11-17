@@ -1,9 +1,10 @@
-import '../classes/navtab.dart';
-import '../services/fire_service.dart';
 import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 import 'package:angular2_components/angular2_components.dart';
+
+import '../classes/navtab.dart';
+import '../services/fire_service.dart';
 
 @Component(
     selector: 'navbar-component',
@@ -27,5 +28,9 @@ class NavbarComponent implements OnInit {
 
   void goToLink(NavTab link) {
     _router.navigate([link.Link, {}]);
+  }
+
+  void login() {
+    _router.navigate(['Login', {}]);
   }
 }

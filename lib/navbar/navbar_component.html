@@ -1,16 +1,16 @@
 <header class="mdl-layout__header">
-	<div class="mdl-layout__header-row">
-		<span class="mdl-layout-title" href="#">
+  <div class="mdl-layout__header-row">
+    <span class="mdl-layout-title" href="#">
 			<glyph icon="filter_hdr"></glyph><b>ClimbR</b></span >
 			<div class="mdl-layout-spacer"></div>
 			<nav class="mdl-navigation" *ngIf="fireService.user != null">
 				<a *ngFor="let link of Links" (click)="goToLink(link)" class="mdl-navigation__link">
 						<i class="material-icons left">{{link.Icon}}</i> {{link.Heading}}
 				</a>				
-				<material-button raised (trigger)="fireService.signOut()"  *ngIf="fireService.user != null">Sign Out</material-button>
+				<material-button raised (trigger)="login()"  *ngIf="fireService.user != null">Sign Out</material-button>
 			</nav>
 			<nav class="mdl-navigation" *ngIf="fireService.user == null">
-			<material-button raised (trigger)="fireService.signIn()" *ngIf="fireService.user == null"> Sign In</material-button>
+			<material-button raised (trigger)="login()" *ngIf="fireService.user == null"> Sign In</material-button>
 			</nav>
 		</div>
 	</header>
