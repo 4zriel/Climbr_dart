@@ -22,18 +22,3 @@
     </div>
   </div>
 </div>
-<material-expansionpanel-set>
-  <material-expansionpanel name="Sign in" saveText="Sign in" (save)="SignIn()">
-    <div>
-      <material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email "></material-input>
-      <material-input floatingLabel required label="Password " type="password" [(inputText)]="user.Password "></material-input>
-    </div>
-  </material-expansionpanel>
-  <material-expansionpanel name="Create new account " saveText="Create new account " (save)="CreateUser()">
-    <div>
-      <material-input floatingLabel required label="Name" [(inputText)]="user.Name"></material-input>
-      <material-input floatingLabel required label="Password" type="password" [(inputText)]="user.Password"></material-input>
-      <material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email"></material-input>
-    </div>
-  </material-expansionpanel>
-</material-expansionpanel-set>

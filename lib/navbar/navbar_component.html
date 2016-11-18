@@ -1,4 +1,4 @@
-<header class="mdl-layout__header">
+<!--<header class="mdl-layout__header">
   <div class="mdl-layout__header-row">
     <span class="mdl-layout-title" href="#">
 			<glyph icon="filter_hdr"></glyph><b>ClimbR</b></span >
@@ -7,10 +7,19 @@
 				<a *ngFor="let link of Links" (click)="goToLink(link)" class="mdl-navigation__link">
 						<i class="material-icons left">{{link.Icon}}</i> {{link.Heading}}
 				</a>				
-				<material-button raised (trigger)="login()"  *ngIf="fireService.user != null">Sign Out</material-button>
+				<material-button raised (trigger)="login(true)"  *ngIf="fireService.user != null">Sign Out</material-button>
 			</nav>
 			<nav class="mdl-navigation" *ngIf="fireService.user == null">
-			<material-button raised (trigger)="login()" *ngIf="fireService.user == null"> Sign In</material-button>
+			<material-button raised (trigger)="login(false)" *ngIf="fireService.user == null"> Sign In</material-button>
 			</nav>
 		</div>
-	</header>
+	</header>-->
+<paper-toolbar>
+  <paper-icon-button icon="image:filter-hdr"></paper-icon-button>
+  <span class="title">ClimbR</span>
+  <iron-icon icon="communication:email"></iron-icon>
+  <paper-icon-button *ngFor="let link of Links" [icon]="link.Icon" (click)="goToLink(link)"></paper-icon-button>
+  <!--<span *ngFor="let link of Links" class="title">{{link.Heading}}</span>-->
+  <paper-button raised class="indigo" (trigger)="login(true)" *ngIf="fireService.user != null">Sign Out</paper-button>
+  <paper-button raised class="indigo" (trigger)="login(false)" *ngIf="fireService.user == null">Sign Out</paper-button>
+</paper-toolbar>

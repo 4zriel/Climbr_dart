@@ -16,6 +16,8 @@ class LoginComponent {
   User user = new User();
   String error = "";
   bool hasError = false;
+  bool createNew = false;
+  String password2 = "";
   LoginComponent(this._fireService);
 
   Future CreateUser() async {

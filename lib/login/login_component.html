@@ -1,15 +1,56 @@
-<material-expansionpanel-set>
-  <material-expansionpanel name="Sign in" saveText="Sign in" (save)="SignIn()">
-    <div>
-      <material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email "></material-input>
-      <material-input floatingLabel required label="Password " type="password" [(inputText)]="user.Password "></material-input>
+<div class=" mdl-grid " *ngIf="!createNew">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--stretch">
+    <div class="mdl-card__titlet">
+      <h1 class="mdl-card__title-text">Login into ClimbR</h1>
     </div>
-  </material-expansionpanel>
-  <material-expansionpanel name="Create new account " saveText="Create new account " (save)="CreateUser()">
-    <div>
-      <material-input floatingLabel required label="Name" [(inputText)]="user.Name"></material-input>
-      <material-input floatingLabel required label="Password" type="password" [(inputText)]="user.Password"></material-input>
-      <material-input floatingLabel required label="Email" type="email" [(inputText)]="user.Email"></material-input>
+    <form>
+      <div class="mdl-card__supporting-text">
+        <div class="input">
+          <material-input type="text" class="login" type="email" required floatingLabel label="Login(email)" [(ngModel)]="user.Email"></material-input>
+        </div>
+        <div class="input">
+          <material-input class="login" type="password" required floatingLabel label="Password" [(ngModel)]="user.Password">
+          </material-input>
+        </div>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <material-button type="submit" raised class="btn-blue" (trigger)="SignIn()">
+          Log in
+        </material-button>
+        <material-button type="submit" raised class="btn-blue" (trigger)="createNew = !createNew">
+          Sign up
+        </material-button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class=" mdl-grid " *ngIf="createNew">
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--stretch">
+    <div class="mdl-card__titlet">
+      <h1 class="mdl-card__title-text">Sign up into ClimbR</h1>
     </div>
-  </material-expansionpanel>
-</material-expansionpanel-set>
+    <form>
+      <div class="mdl-card__supporting-text">
+        <div class="input">
+          <material-input type="text" class="login" type="email" required floatingLabel label="Login(email)" [(ngModel)]="user.Email"></material-input>
+        </div>
+        <div class="input">
+          <material-input class="login" type="password" required floatingLabel label="Password" [(ngModel)]="user.Password">
+          </material-input>
+        </div>
+        <div class="input">
+          <material-input class="login" type="password" required floatingLabel label="Repeat password" [(ngModel)]="password2">
+          </material-input>
+        </div>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <material-button type="submit" raised class="btn-blue" (trigger)="CreateUser()">
+          Sign up
+        </material-button>
+        <material-button type="submit" raised class="btn-blue" (trigger)="createNew = !createNew">
+          Return to log in
+        </material-button>
+      </div>
+    </form>
+  </div>
+</div>
