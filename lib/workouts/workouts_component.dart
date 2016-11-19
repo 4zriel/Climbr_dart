@@ -5,10 +5,9 @@ import 'workout_detail/workout_detail_compontent.dart';
 import 'workouts_list/workouts_list_component.dart';
 
 @Component(
-  selector: 'workouts',
-  templateUrl: 'workouts_component.html',
-  directives: const [ROUTER_DIRECTIVES]
-)
+    selector: 'workouts',
+    templateUrl: 'workouts_component.html',
+    directives: const [ROUTER_DIRECTIVES])
 @RouteConfig(const [
   const Route(
       path: '/list',

@@ -13,9 +13,9 @@ import '../services/fire_service.dart';
 class NavbarComponent implements OnInit {
   final List<NavTab> Links = [
     new NavTab('Home', 'home', 'Home'),
-    new NavTab('Workouts', 'maps:directions-run', 'Workouts'),
-    new NavTab('Statistics', 'av:equalizer', 'Statistics'),
-    new NavTab('Profile', 'icons:account-circle', 'Profile')
+    new NavTab('Workouts', 'directions_run', 'Workouts'),
+    new NavTab('Statistics', 'equalizer', 'Statistics'),
+    new NavTab('Profile', 'account_circle', 'Profile')
   ];
 
   final Router _router;

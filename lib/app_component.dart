@@ -2,18 +2,21 @@ import 'package:angular2/angular2.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/platform/common.dart';
 import 'package:angular2/router.dart';
-//polymers
-import 'package:polymer_elements/iron_flex_layout/classes/iron_flex_layout.dart';
-import 'package:polymer_elements/iron_icons.dart';
-import 'package:polymer_elements/iron_iconset.dart';
-import 'package:polymer_elements/iron_iconset.dart';
-import 'package:polymer_elements/iron_icon.dart';
-import 'package:polymer_elements/paper_material.dart';
-import 'package:polymer_elements/paper_toolbar.dart';
-import 'package:polymer_elements/paper_icon_button.dart';
-import 'package:polymer_elements/image_icons.dart';
-import 'package:polymer_elements/maps_icons.dart';
-import 'package:polymer_elements/av_icons.dart';
+// //polymers
+// import 'package:polymer_elements/iron_flex_layout/classes/iron_flex_layout.dart';
+// import 'package:polymer_elements/iron_icons.dart';
+// import 'package:polymer_elements/iron_iconset.dart';
+// import 'package:polymer_elements/iron_iconset.dart';
+// import 'package:polymer_elements/iron_icon.dart';
+// import 'package:polymer_elements/paper_material.dart';
+// import 'package:polymer_elements/paper_toolbar.dart';
+// import 'package:polymer_elements/paper_icon_button.dart';
+// import 'package:polymer_elements/paper_dialog.dart';
+// import 'package:polymer_elements/image_icons.dart';
+// import 'package:polymer_elements/maps_icons.dart';
+// import 'package:polymer_elements/av_icons.dart';
+// import 'package:polymer_elements/paper_header_panel.dart';
+// import 'package:polymer_elements/paper_styles/classes/global.dart';
 
 import 'footer/footer_component.dart';
 import 'home/home_component.dart';

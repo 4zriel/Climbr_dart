@@ -19,7 +19,6 @@ class WorkoutsListComponent {
   final FireService _fireService;
   final Router _router;
   List<Workout> WorkoutsList = new List<Workout>();
-  String test = "JAJCO";
   bool inProgress = true;
 
   WorkoutsListComponent(this._fireService, this._router) {
