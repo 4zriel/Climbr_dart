@@ -13,32 +13,26 @@ import '../services/fire_service.dart';
     directives: const [materialDirectives],
     providers: const [materialProviders])
 class LoginComponent {
-  final FireService _fireService;
+  final FireService fireService;
   User user = new User();
   String error = "";
   bool hasError = false;
   bool createNew = false;
   String password2 = "";
-  LoginComponent(this._fireService);
+  LoginComponent(this.fireService);
 
   Future CreateUser() async {
     try {
-      _fireService.CreateUser(user);
+      fireService.CreateUser(user);
     } catch (e) {
       hasError = true;
       error = e;
     }
   }
 
-  openModal() {
-    var modal = querySelector('modal');
-    print(modal);
-    modal.open();
-  }
-
   Future SignIn() async {
     try {
-      _fireService.signInWithMail(user.Email, user.Password);
+      fireService.signInWithMail(user.Email, user.Password);
     } catch (e) {
       hasError = true;
       error = e;

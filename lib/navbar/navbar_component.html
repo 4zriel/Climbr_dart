@@ -1,16 +1,17 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title" href="#">
-			<glyph icon="filter_hdr"></glyph><b>ClimbR</b></span >
-			<div class="mdl-layout-spacer"></div>
-			<nav class="mdl-navigation" *ngIf="fireService.user != null">
-				<a *ngFor="let link of Links" (click)="goToLink(link)" class="mdl-navigation__link">
-						<i class="material-icons left">{{link.Icon}}</i> {{link.Heading}}
-				</a>				
-				<material-button raised (trigger)="login()"  *ngIf="fireService.user != null">Sign Out</material-button>
-			</nav>
-			<nav class="mdl-navigation" *ngIf="fireService.user == null">
-			<material-button raised (trigger)="login()" *ngIf="fireService.user == null"> Sign In</material-button>
-			</nav>
-		</div>
-	</header>
+<div class="navbar-fixed deep-orange darken-2">
+  <nav>
+    <div class="nav-wrapper deep-orange darken-2">
+      <a href="#!" class="brand-logo"><i class="material-icons">filter_hdr</i>ClimbR</a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngFor="let link of Links" (click)="goToLink(link)">
+          <a><i class="material-icons left">{{link.Icon}}</i>
+          {{link.Heading}}</a>
+        </li>
+        <li>
+          <material-button raised (trigger)="login()"> Sign In</material-button>
+          <!--*ngIf="fireService.user == null-->
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,33 +1,17 @@
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp mdl-cell--stretch">
-	<thead>
-		<tr>
-			<th class="mdl-data-table__cell--non-numeric">Id</th>
-			<!--<th class="col-xs ">Selected</th>-->
-			<th class="col-xs ">Name</th>
-			<th class="col-xs ">Localization</th>
-			<th class="col-xs "></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let workout of WorkoutsList" class="ListHover iconHover mdl-data-table__cell--non-numeric" (click)="onSelect(workout)">
-			<td class="mdl-data-table__cell--non-numeric">{{workout.Id}}</td>
-			<!--<td> <input [(ngModel)]="workout.IsSelected " type="checkbox"> </td>-->
-			<td class="row ">
-				<div>{{workout.Name}}</div>
-				<small>
-            {{workout.Description}}
-          </small>
-			</td>
-			<td>{{workout.Localization}} </td>
-			<td class="row">
-				<material-button icon (click)="Edit(workout)">
-					<glyph icon="edit"></glyph>
-				</material-button>
-				<material-button icon (click)="Edit(workout)">
-					<glyph icon="delete"></glyph>
-				</material-button>
-			</td>
-		</tr>
-	</tbody>
-</table>
 <button (click)="add()">add</button>
+<ul class="collection ListHover hoverable">
+  <li class="collection-item avatar ListHover hoverable" *ngFor="let workout of WorkoutsList" (click)="onSelect(workout)">
+    <!--<img src="images/yuna.jpg" alt="" class="circle">-->
+    <span class="title">{{workout.Name}}</span>
+    <p>{{workout.Description}}<br>{{workout.Localization}}
+    </p>
+    <div href="#!" class="secondary-content">
+      <material-button icon (click)="Edit(workout)">
+        <glyph icon="edit"></glyph>
+      </material-button>
+      <material-button icon (click)="Edit(workout)">
+        <glyph icon="delete"></glyph>
+      </material-button>
+    </div>
+  </li>
+</ul>
